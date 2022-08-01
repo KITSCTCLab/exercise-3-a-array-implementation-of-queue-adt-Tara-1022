@@ -44,7 +44,7 @@ class Solution:
         Returns:
           True if it is full, else returns False.
         """
-        return self.stack.length() == self.size
+        return self.top == self.size - 1
 
     def is_queue_full(self):
         """
@@ -74,7 +74,7 @@ class Solution:
             if  self.front == -1:
                 self.front = 0
             self.rear += 1
-            self.queue[rear] = character
+            self.queue[self.rear] = character
 
     def pop_character(self):
         """
@@ -84,7 +84,7 @@ class Solution:
         """
         if not self.is_stack_empty():
             self.top -= 1
-        return self.pop(self.top + 1)
+            return self.stack.pop(self.top + 1)
 
     def dequeue_character(self):
         """
