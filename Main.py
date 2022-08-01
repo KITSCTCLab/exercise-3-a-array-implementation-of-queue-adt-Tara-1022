@@ -74,7 +74,7 @@ class Solution:
             if  self.front == -1:
                 self.front = 0
             self.rear += 1
-            self.queue[self.rear] = character
+            self.queue.append(character)
 
     def pop_character(self):
         """
