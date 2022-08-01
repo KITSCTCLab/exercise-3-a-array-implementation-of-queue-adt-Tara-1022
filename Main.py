@@ -118,6 +118,7 @@ pop the top character from stack
 dequeue the first character from queue
 compare both characters
 If the comparison fails, set is_palindrome as False.
+T
 '''
 for index in range(length_of_text):
     if solution.pop_character() != solution.dequeue_character():
